@@ -17,7 +17,7 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
 		header('location:account.php');
 		die();
 	}else {
-		$_SESSION['flash']['success'] = "Identifiant ou mot de passe incorrecte.";
+		$_SESSION['flash']['danger'] = "Identifiant ou mot de passe incorrecte.";
 	}
 
 }
@@ -36,7 +36,7 @@ include 'inc/header.php';
 					<input type="text" id="username" name="username" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="password">Mot de passe</label>
+					<label for="password">Mot de passe <a href="forget.php">(J'ai oublié mon mot de passe)</a></label>
 					<input type="password" id="password" name="password" class="form-control">
 				</div>
 				<button type="submit" class="btn btn-primary">Se connecter</button>
